@@ -1,0 +1,41 @@
+
+MariaDB [(none)]> create database abdullah;
+Query OK, 1 row affected (0.020 sec)
+
+
+MariaDB [(none)]>  use abdullah;
+
+MariaDB [abdullah]> create table maria(
+    -> id int primary key auto_increment,
+    -> name varchar(100) not null,
+    -> age int not null,
+    -> address varchar(100) not null);
+Query OK, 0 rows affected (0.220 sec)
+
+describe maria' at line 2
+MariaDB [abdullah]> describe maria;
++---------+--------------+------+-----+---------+----------------+
+| Field   | Type         | Null | Key | Default | Extra          |
++---------+--------------+------+-----+---------+----------------+
+| id      | int(11)      | NO   | PRI | NULL    | auto_increment |
+| name    | varchar(100) | NO   |     | NULL    |                |
+| age     | int(11)      | NO   |     | NULL    |                |
+| address | varchar(100) | NO   |     | NULL    |                |
++---------+--------------+------+-----+---------+----------------+
+4 rows in set (0.043 sec)
+
+MariaDB [abdullah]> insert into maria values (null,"shazil",19,"lahore");
+Query OK, 1 row affected (0.051 sec)
+
+4 rows in set (0.028 sec)
+
+MariaDB [abdullah]> select * from maria;
++----+----------+-----+---------+
+| id | name     | age | address |
++----+----------+-----+---------+
+|  1 | Abdullah |  20 | Karachi |
+|  2 | shazil   |  19 | lahore  |
++----+----------+-----+---------+
+2 rows in set (0.000 sec)
+
+MariaDB [abdullah]>
